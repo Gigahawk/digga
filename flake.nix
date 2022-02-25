@@ -103,6 +103,7 @@
           hosts = {
             /* set host specific properties here */
             NixOS = { };
+            nixosVbox = { };
           };
           importables = rec {
             profiles = digga.lib.rakeLeaves ./profiles // {
