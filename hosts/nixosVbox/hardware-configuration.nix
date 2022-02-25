@@ -13,18 +13,18 @@
 
   fileSystems."/" =
     {
-      device = "/dev/disk/by-uuid/29a7c086-11fb-4370-ae9b-bccff15fc928";
+      device = "/dev/disk/by-label/nixos";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
     {
-      device = "/dev/disk/by-uuid/D14C-49B2";
+      device = "/dev/disk/by-label/boot";
       fsType = "vfat";
     };
 
   swapDevices =
-    [{ device = "/dev/disk/by-uuid/a609b997-bc9b-42ff-a3d9-a603550cd97c"; }];
+    [{ device = "/dev/disk/by-label/swap"; }];
 
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
