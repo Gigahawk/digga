@@ -2,7 +2,7 @@
 {
   home-manager.users = { inherit (hmUsers) jasper; };
 
-  users.users.nixos = {
+  users.users.jasper = {
     password = "jasper";
     description = "default";
     isNormalUser = true;
